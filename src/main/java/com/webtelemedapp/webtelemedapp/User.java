@@ -6,13 +6,13 @@ public class User {
 
     private String ime;
     private String prezime;
-    private Date datumRodenja;
+    private String datumRodenja;
     private String brojMobitela;
     private String email;
     private String lozinka;
     private String mbo;
 
-    public User(String ime, String prezime, Date datumRodenja, String brojMobitela, String email, String lozinka, String mbo) {
+    public User(String ime, String prezime, String datumRodenja, String brojMobitela, String email, String lozinka, String mbo) {
         this.ime = ime;
         this.prezime = prezime;
         this.datumRodenja = datumRodenja;
@@ -38,11 +38,11 @@ public class User {
         this.prezime = prezime;
     }
 
-    public Date getDatumRodenja() {
+    public String getDatumRodenja() {
         return datumRodenja;
     }
 
-    public void setDatumRodenja(Date datumRodenja) {
+    public void setDatumRodenja(String datumRodenja) {
         this.datumRodenja = datumRodenja;
     }
 
