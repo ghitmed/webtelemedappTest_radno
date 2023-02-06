@@ -77,5 +77,4 @@ public class User {
     public void setMbo(String mbo) {
         this.mbo = mbo;
     }
-
 }
