@@ -10,9 +10,4 @@ public class WebtelemedappApplication {
 		SpringApplication.run(WebtelemedappApplication.class, args);
 	}
 
-
-	public
-
-
-
 }

@@ -10,38 +10,8 @@ import java.util.List;
 
 public class DoctorController {
 
-    @Controller
-    public class TodoController {
-
-        List<User> todoList = new ArrayList<>();
-
-
-
-        @GetMapping("/todos")
-        public String showTodos(Model model) {
-            model.addAttribute(todoList);
-            return "employee_todo_list_user.html";
-        }
-
-
-        @GetMapping("/addNewTodo")
-        public String addNewTodo(String title) {
-            todoList.add(new Todo(title));
-
-            return "redirect:/todos";
-
-        }
-
-        @GetMapping("/delete")
-        public String delete(String title) {
-            for(Todo todo : todoList) {
-                if(todo.getTitle().equals(title)) {
-                    todoList.remove(todo);
-                    break;
-                }
-            }
-
-            return "redirect:/todos";
-
-        }
+    @GetMapping("/addPatient")
+    public String addPatient(Model model) {
+        return "patientInput.html";
+    }
 }
