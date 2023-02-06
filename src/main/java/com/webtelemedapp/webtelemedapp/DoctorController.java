@@ -18,4 +18,12 @@ public class DoctorController {
     public String addPatient() {
         return "patientInput.html";
     }
+
+    @GetMapping("/addNewTodo")
+    public String addNewTodo(String title) {
+        userList.add(new User(title));
+
+        return "redirect:patientInput.html";
+
+    }
 }
