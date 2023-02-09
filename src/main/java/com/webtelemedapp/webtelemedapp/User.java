@@ -1,7 +1,5 @@
 package com.webtelemedapp.webtelemedapp;
 
-import java.util.Date;
-
 public class User {
 
     private String ime;

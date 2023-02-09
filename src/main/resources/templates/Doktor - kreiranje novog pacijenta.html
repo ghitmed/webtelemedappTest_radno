@@ -85,44 +85,48 @@
 
     <h1 style="text-align: center; padding:50px">Unos informacija o pacijentu</h1>
 
-    <form style="width: 50%; margin:0 auto;">
+    <form style="width: 50%; margin:0 auto;" action="addNewUser">
+
+
+
+        <form action="/addNewUser">
+
+            <div class="form-outline mb-4 .was-validated">
+            <label for="ime1">Ime</label>
+            <input type="text" id="ime1" name="ime1" required placeholder="Unesite ime">
+            </div>
+
+            <div class="form-outline mb-4 .was-validated">
+            <label for="prezime1">Prezime</label>
+            <input type="text" id="prezime1" name="prezime1" required placeholder="Unesite prezime">
+            </div>
 
         <div class="form-outline mb-4 .was-validated">
-            <label for="fname">Ime</label>
-            <input type="text" id="fname" name="fname" required placeholder="Unesite ime">
-
+            <label for="datumRodenja1">datumRodenja</label>
+            <input type="date" id="datumRodenja1" name="datumRodenja1" required>
         </div>
 
         <div class="form-outline mb-4 .was-validated">
-            <label for="lname">Prezime</label>
-            <input type="text" id="lname" name="lname" required placeholder="Unesite prezime">
-        </div>
-
-        <div class="form-outline mb-4 .was-validated">
-            <label for="dateofbirth">Datum rođenja</label>
-            <input type="date" id="dateofbirth" name="dateofbirth" required>
-        </div>
-
-        <div class="form-outline mb-4 .was-validated">
-            <label for="dateofbirth">Mobitel</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"
+            <label for="brojMobitela1">brojMobitela</label>
+            <input type="tel" id="brojMobitela1" name="brojMobitela1" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"
                    placeholder="091-1234-567" required>
         </div>
 
         <div class="form-outline mb-4 .was-validated">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+            <label for="email1">Email</label>
+            <input type="email" id="email1" name="email1" required placeholder="example@gmail.com">
         </div>
 
         <div class="form-outline mb-4 .was-validated">
-            <label for="password">Lozinka</label>
-            <input type="text" id="password" name="password" required>
+            <label for="lozinka1">Lozinka</label>
+            <input type="password" id="lozinka1" name="lozinka1" required>
         </div>
 
         <div class="form-outline mb-4 .was-validated">
-            <label for="mbo">MBO</label>
-            <input type="number" id="mbo" name="mbo" maxlength="9" required>
+            <label for="mbo1">MBO</label>
+            <input type="number" id="mbo1" name="mbo1" maxlength="9" required>
         </div>
+    </form>
 
         <div class="row mb-4">
             <div class="col d-flex justify-content-center">
@@ -131,7 +135,7 @@
 
         <button type="button" class="btn btn-danger btn-block mb-4"
                 style="font-size: 20px; background-color: #f24521;"
-                onclick="window.location.href='doctordashboard.html'">Spremi</button>
+                onclick="window.location.href='/listUsers'">Spremi</button>
 
     </form>
 

@@ -1,6 +1,7 @@
 package com.webtelemedapp.webtelemedapp;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
@@ -10,20 +11,63 @@ import java.util.List;
 public class DoctorController {
 
     List<User> userList = new ArrayList<>();
+
+   /* public DoctorController(List<User> userList) {
+        userList.add(new User("Mirko", "Božić", "09.06.1991.", "0917256847", "mirko@gmail.com", "12345", "126547852" ));
+    }*/
+
+
+
+
+    @GetMapping("/listUsers")
+    public String listUsers(Model model) {
+        model.addAttribute(userList);
+        return "Doktor - dashboard.html";
+
+    }
+
+    @GetMapping("/addNewUser")
+    public String addNewUser(String ime1, String prezime1, String datumRodenja1,  String brojMobitela1, String email1, String lozinka1, String mbo1, Model model) {
+        model.addAttribute(userList);
+        User newUser = new User (ime1, prezime1, datumRodenja1, brojMobitela1, email1, lozinka1, mbo1);
+        userList.add (newUser);
+        return "Doktor - kreiranje novog pacijenta.html";
+
+    }
+    @GetMapping("/redirectToCreate")
+    public String redirectPatients (Model model) {
+        model.addAttribute (userList);
+        return "Doktor - kreiranje novog pacijenta.html";
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+  /*  List<User> userList = new ArrayList<>();
     public DoctorController() {
         userList.add(new User("Mirko", "Bozic", "31.12.1978.", "099987654", "mirko@mail.com", "lozinka", "987654312"));
 
     }
     @GetMapping("/addPatient")
     public String addPatient() {
-        return "patientInput.html";
+        return "Doktor - kreiranje novog pacijenta.html";
     }
 
-    @GetMapping("/addNewTodo")
-    public String addNewTodo(String title) {
+    @GetMapping("/addPatient")
+    public String addPatient(String title) {
         userList.add(new User(title));
 
-        return "redirect:patientInput.html";
+        return "redirect:Doktor - kreiranje novog pacijenta.html";
 
-    }
-}
+    }*/
+
