@@ -17,8 +17,6 @@ public class DoctorController {
     }*/
 
 
-
-
     @GetMapping("/listUsers")
     public String listUsers(Model model) {
         model.addAttribute(userList);
@@ -31,7 +29,7 @@ public class DoctorController {
         model.addAttribute(userList);
         User newUser = new User (ime1, prezime1, datumRodenja1, brojMobitela1, email1, lozinka1, mbo1);
         userList.add (newUser);
-        return "Doktor - kreiranje novog pacijenta.html";
+        return "redirect: Doktor - dashboard.html";
 
     }
     @GetMapping("/redirectToCreate")
