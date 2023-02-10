@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Prijava</title>
+
+    <style>
+
+
+        .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        padding: 40px;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 50px;
+}
+
+
+        Body {
+            font-size: large;
+
+        }
+
+
+        input[type=password] {
+            width: 100%;
+            margin: 20px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid #f24521;
+            box-sizing: border-box;
+        }
+
+        input[type=text]{
+            width: 100%;
+            margin: 20px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid #f24521;
+            box-sizing: border-box;
+        }
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+        <header><img src="logo.png" style="width: 100%" alt="telemedlogo"></header>
+
+        <h1 style="color: black; text-align: center;padding:20px;">Dobro došli!</h1>
+
+        <h4 style="color: black; margin-bottom: 3%; text-align: center; padding:10px">Telemedicinski sustav za slanje i pregled krvnog tlaka</h4>
+
+    <div class="row mb-4">
+        <div class="cold-flex justify-content-center">
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="cold-flex justify-content-center">
+        </div>
+    </div>
+
+
+    <form>
+
+        <div class="LoginForm">
+            <label for="username" >Korisničko ime</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="LoginForm2">
+            <label for="password">Lozinka</label>
+            <input type="password" id="password" name="password" required>
+
+        </div>
+
+        <div class="row mb-4">
+            <div class="cold-flex justify-content-center">
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="cold-flex justify-content-center">
+            </div>
+        </div>
+
+
+
+
+        <button type="button" class="btn btn-danger btn-block mb-4"
+                style="font-size: 20px; background-color: #f24521;"
+                onclick="window.location.href='patientinput.html'">Prijava pacijent</button>
+
+        <button type="button" class="btn btn-danger btn-block mb-4"
+                style="font-size: 20px; background-color: #f24521;"
+                onclick="window.location.href='doctordashboard.html'">Prijava doktor</button>
+
+    </form>
+
+
+        <footer style="color: #f24521; text-align: center;">Copyright &#169; Telemed / All rights reserved</footer>
+
+
+</div>
+</body>
+
+</html>
