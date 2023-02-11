@@ -17,6 +17,22 @@ public class DoctorController {
     }*/
 
 
+
+    @GetMapping("/addNewUser")
+    public String addNewUser(String ime1, String prezime1, String datumRodenja1,  String brojMobitela1, String email1, String lozinka1, String mbo1, Model model) {
+        User newUser = new User (ime1, prezime1, datumRodenja1, brojMobitela1, email1, lozinka1, mbo1);
+        userList.add (newUser);
+        return "redirect:/listUsers";
+
+    }
+    @GetMapping("/showCreateUser")
+    public String showCreateUser (Model model) {
+        model.addAttribute (userList);
+        return "Doktor - kreiranje novog pacijenta.html";
+
+    }
+
+
     @GetMapping("/listUsers")
     public String listUsers(Model model) {
         model.addAttribute(userList);
@@ -24,20 +40,15 @@ public class DoctorController {
 
     }
 
-    @GetMapping("/addNewUser")
-    public String addNewUser(String ime1, String prezime1, String datumRodenja1,  String brojMobitela1, String email1, String lozinka1, String mbo1, Model model) {
-        model.addAttribute(userList);
-        User newUser = new User (ime1, prezime1, datumRodenja1, brojMobitela1, email1, lozinka1, mbo1);
-        userList.add (newUser);
-        return "redirect: Doktor - dashboard.html";
 
-    }
-    @GetMapping("/redirectToCreate")
-    public String redirectPatients (Model model) {
+
+    @GetMapping("/showUser")
+    public String showUser (Model model) {
         model.addAttribute (userList);
-        return "Doktor - kreiranje novog pacijenta.html";
+        return "Doktor - pregled pojedinog pacijenta.html";
 
     }
+
 
 
 

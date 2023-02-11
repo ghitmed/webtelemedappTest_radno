@@ -88,9 +88,6 @@
     <form style="width: 50%; margin:0 auto;" action="/addNewUser">
 
 
-
-        <form action="/addNewUser">
-
             <div class="form-outline mb-4 .was-validated">
             <label for="ime1">Ime</label>
             <input type="text" id="ime1" name="ime1" required placeholder="Unesite ime">
@@ -126,6 +123,12 @@
             <label for="mbo1">MBO</label>
             <input type="number" id="mbo1" name="mbo1" maxlength="9" required>
         </div>
+
+
+        <button type="submit" class="btn btn-danger btn-block mb-4"
+                style="font-size: 20px; background-color: #f24521;"
+                >Spremi</button>
+
     </form>
 
         <div class="row mb-4">
@@ -133,11 +136,9 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-danger btn-block mb-4"
-                style="font-size: 20px; background-color: #f24521;"
-                onclick="window.location.href='/listUsers'">Spremi</button>
 
-    </form>
+
+
 
     <footer style="color: #f24521;text-align:center; padding-bottom: 1%;">Copyright &#169; Telemed / All rights reserved</footer>
 
