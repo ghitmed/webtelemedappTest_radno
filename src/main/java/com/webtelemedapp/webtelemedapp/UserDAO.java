@@ -60,33 +60,3 @@ public class UserDAO {
         return user;
     }
 }
-
-/*
-* // LOGIN METHODS
-
-    @GetMapping("/login")
-    public String login() {
-        return "login.html";
-    }
-
-    @GetMapping("/loginProcess")
-    public String login(String email, String pass, Model model) {
-
-        // find user in list
-        User user = (email, pass);
-
-        if(user != null) {
-            System.out.println("User found: " + user);
-            currUser = user;
-            if(user.getType() == 0)
-                return "redirect:/todos?userId=" + user.getId();
-            else
-                return "redirect:/users";
-        } else {
-            model.addAttribute("userMessage","User not found!");
-            return "login.html";
-        }
-
-
-    }
-* */
