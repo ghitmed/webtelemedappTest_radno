@@ -10,6 +10,16 @@ public class UserReport {
         private int heartBeats;
         private String description;
 
+        //dodatno kod kreiranja logiranja
+        private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public UserReport(String date, int systolic, int diastolic, int heartBeats, String description) {
         this.date = date;

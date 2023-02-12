@@ -18,6 +18,12 @@ public class DoctorController {
     }*/
 
 
+    //Fale metode za prikaz zapisa za određenog usera/pacijenta  koji je logiran kod pacijentaca i popis svih kod doktora
+
+
+
+
+
 
     @GetMapping("/addNewUser")
     public String addNewUser(String ime1, String prezime1, String datumRodenja1,  String brojMobitela1, String email1, String lozinka1, String mbo1, Model model) {
@@ -38,8 +44,9 @@ public class DoctorController {
     public String listUsers(Model model) {
         model.addAttribute(userList);
         return "Doktor - dashboard.html";
-
     }
+
+
 
 
 
@@ -76,6 +83,14 @@ public class DoctorController {
 
     }
 
+/*
+    @GetMapping("/todos")
+    public String showTodos(int userId, Model model) {
+        model.addAttribute(getTodoListForUserId(userId));
+        model.addAttribute("currUser", userRepository.getUserById(userId));
+        return "employee_todo_list_user.html";
+    }
+*/
 }
 
 
