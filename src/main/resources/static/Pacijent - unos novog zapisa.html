@@ -84,26 +84,32 @@
         </div>
     </div>
 
-    <form style="width: 50%; margin:0 auto;">
+    <form style="width: 50%; margin:0 auto;" action="/addNewReport">
 
         <div class="form-outline mb-4">
-            <label for="sistol">Sistolički tlak</label>
-            <input type="number" id="sistol" name="sistol" min="0" max="200" placeholder="mmHg" required>
+            <label for="dtm1">Datum</label>
+            <input type="date" id="dtm1" name="dtm1" min="0" max="200" placeholder="mmHg" required>
+        </div>
+
+
+        <div class="form-outline mb-4">
+            <label for="st1">Sistolički tlak</label>
+            <input type="number" id="st1" name="st1" min="0" max="200" placeholder="mmHg" required>
         </div>
 
         <div class="form-outline mb-4">
-            <label for="dijabol">Dijastolički tlak</label>
-            <input type="number" id="dijabol" name="dijabol" min="0" max="200" placeholder="mmHg" required>
+            <label for="dt1">Dijastolički tlak</label>
+            <input type="number" id="dt1" name="dt1" min="0" max="200" placeholder="mmHg" required>
         </div>
 
         <div class="form-outline mb-4">
-            <label for="otkucaji">Broj otkucaja</label>
-            <input type="number" id="otkucaji" name="otkucaji" min="0" max="400" placeholder="bpm" required>
+            <label for="otk1">Broj otkucaja</label>
+            <input type="number" id="otk1" name="otk1" min="0" max="400" placeholder="bpm" required>
         </div>
 
         <div class="form-outline mb-4">
-            <label for="opis">Kratki opis trenutnog stanja</label>
-            <textarea name="opis" id="opis" cols="50" rows="5" style="text-align: center;"></textarea>
+            <label for="opis1">Kratki opis trenutnog stanja</label>
+            <textarea name="opis1" id="opis1" cols="50" rows="5" style="text-align: center;"></textarea>
         </div>
 
         <div class="row mb-4">
@@ -111,9 +117,9 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-danger btn-block mb-4"
+        <button type="submit" class="btn btn-danger btn-block mb-4"
                 style="font-size: 20px; background-color: #f24521;"
-                onclick="window.location.href='patientrecord.html'">Podnesi</button>
+                >Podnesi</button>
 
     </form>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="UTF-8">
@@ -86,7 +86,6 @@
   <table class="table .table-condensed">
     <thead>
     <tr>
-      <th>rb.</th>
       <th>Datum</th>
       <th>Sistolički tlak</th>
       <th>Dijastolički tlak</th>
@@ -96,31 +95,14 @@
     </thead>
 
     <tbody>
-    <tr>
-      <td>1</td>
-      <td>01.02.2023.</td>
-      <td>120</td>
-      <td>80</td>
-      <td>39</td>
-      <td>Famozno!</td>
-    </tr>
 
-    <tr>
-      <td>2</td>
-      <td>01.02.2023.</td>
-      <td>90</td>
-      <td>70</td>
-      <td>50</td>
-      <td>ok</td>
-    </tr>
+    <tr th:each="item : ${userReportList}">
+      <td th:text="${item.date}"></td>
+      <td th:text="${item.systolic}"></td>
+      <td th:text="${item.diastolic}"></td>
+      <td th:text="${item.heartBeats}"></td>
+      <td th:text="${item.description}"></td>
 
-    <tr>
-      <td>3</td>
-      <td>02.01.2023.</td>
-      <td>60</td>
-      <td>60</td>
-      <td>0</td>
-      <td>ugh!</td>
     </tr>
 
     </tbody>
