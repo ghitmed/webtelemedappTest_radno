@@ -19,6 +19,7 @@ public class UserDAO {
         // patients user
         userList.add(new User("Mirko", "Božić", "09.06.1991.", "0917256847", "mirko@gmail.com", "12345", "111222"));
         userList.add(new User("Damjan", "Znika", "01.01.1998.", "0912233444", "damjan@gmail.com", "123", "444555"));
+        userList.add(new User("Goran", "Skendžić", "01.05.1990.", "0912223344", "goran@gmail.com", "123", "777333"));
         userList.add(new User("Danijel", "Hlad", "01.02.2000.", "0912223344", "danijel@gmail.com", "123", "222333"));
 
     }

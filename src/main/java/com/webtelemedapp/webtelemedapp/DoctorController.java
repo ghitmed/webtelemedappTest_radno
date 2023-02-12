@@ -56,10 +56,10 @@ public class DoctorController {
     }
 
     @GetMapping("/loginProcess")
-    public String login(String email, String pass, Model model) {
+    public String login(String email, String password, Model model) {
 
         // find user in list
-        User user = UserDAO.getUserByUsernameAndPassword(email, pass);
+        User user = UserDAO.getUserByUsernameAndPassword(email, password);
 
         if(user != null) {
             System.out.println("User found: " + user);
