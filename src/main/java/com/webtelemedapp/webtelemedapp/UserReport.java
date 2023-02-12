@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class UserReport {
 
-
         private String date;
         private int systolic;
         private int diastolic;

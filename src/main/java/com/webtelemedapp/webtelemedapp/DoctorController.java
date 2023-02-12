@@ -10,6 +10,7 @@ import java.util.List;
 @Controller
 public class DoctorController {
 
+    User currentUser;
     List<User> userList = new ArrayList<>();
 
    /* public DoctorController(List<User> userList) {
@@ -49,8 +50,31 @@ public class DoctorController {
 
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "login.html";
+    }
+
+    @GetMapping("/loginProcess")
+    public String login(String email, String pass, Model model) {
+
+        // find user in list
+        User user = UserDAO.getUserByUsernameAndPassword(email, pass);
+
+        if(user != null) {
+            System.out.println("User found: " + user);
+            currentUser = user;
+            if(user.getType() == 0)
+                return "redirect:/addNewReport?userId=" + user.getId();
+            else
+                return "redirect:/listUsers";
+        } else {
+            model.addAttribute("userMessage","User not found!");
+            return "login.html";
+        }
 
 
+    }
 
 }
 
