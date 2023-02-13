@@ -1,8 +1,14 @@
 package com.webtelemedapp.webtelemedapp;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity(name="app_user")
 public class User {
     //dodano za logiranje
     static int idCounter = 0;
+    @Id @GeneratedValue
     int id;
     //0-Patient, 1-Admin
     int type = 0;
