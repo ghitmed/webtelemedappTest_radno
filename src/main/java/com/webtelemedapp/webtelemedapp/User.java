@@ -1,6 +1,25 @@
 package com.webtelemedapp.webtelemedapp;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity(name="app_user")
 public class User {
+    //dodano za logiranje
+    static int idCounter = 0;
+    @Id @GeneratedValue
+    int id;
+    //0-Patient, 1-Admin
+    int type = 0;
+
+    public User(String email, String lozinka) {
+        this.email = email;
+        this.lozinka = lozinka;
+
+        id = idCounter++;
+    }
+
 
     private String ime;
     private String prezime;
@@ -18,6 +37,7 @@ public class User {
         this.email = email;
         this.lozinka = lozinka;
         this.mbo = mbo;
+        id = idCounter++;
     }
 
     public String getIme() {
@@ -75,4 +95,18 @@ public class User {
     public void setMbo(String mbo) {
         this.mbo = mbo;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+
 }

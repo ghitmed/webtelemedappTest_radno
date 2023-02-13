@@ -1,16 +1,30 @@
 package com.webtelemedapp.webtelemedapp;
 
-import java.util.Date;
+import jakarta.persistence.*;
 
+import java.util.Date;
+@Entity
 public class UserReport {
 
-
+        @Id @GeneratedValue
+        private int Id;
         private String date;
         private int systolic;
         private int diastolic;
         private int heartBeats;
         private String description;
 
+        //dodatno kod kreiranja logiranja
+        @ManyToOne
+        private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public UserReport(String date, int systolic, int diastolic, int heartBeats, String description) {
         this.date = date;
