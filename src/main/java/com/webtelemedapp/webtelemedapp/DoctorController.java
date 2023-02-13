@@ -83,21 +83,7 @@ public class DoctorController {
 
     }
 
-/*
-    @GetMapping("/todos")
-    public String showTodos(int userId, Model model) {
-        model.addAttribute(getTodoListForUserId(userId));
-        model.addAttribute("currUser", userRepository.getUserById(userId));
-        return "employee_todo_list_user.html";
-    }
-*/
 }
-
-
-
-
-
-
 
 
 

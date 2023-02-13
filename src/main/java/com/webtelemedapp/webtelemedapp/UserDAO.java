@@ -1,7 +1,6 @@
 package com.webtelemedapp.webtelemedapp;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +30,7 @@ public class UserDAO {
     }
 
 
-    public List<User> getUserListWhichAreEmployees() {
+    public List<User> getUserListPatients() {
 
         List<User> userListPatients = new ArrayList<>();
 
@@ -57,7 +56,6 @@ public class UserDAO {
         for (User userLogin : userList) {
             if (userLogin.getId() == id)
                 user = userLogin;
-
         }
         return user;
     }

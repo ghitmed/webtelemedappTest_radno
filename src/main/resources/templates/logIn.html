@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -91,7 +91,6 @@
             <input type="password" id="password" name="password" required>
 
         </div>
-
         <div class="row mb-4">
             <div class="cold-flex justify-content-center">
             </div>
@@ -102,14 +101,11 @@
             </div>
         </div>
 
+        <div th:text="${userMessage ?: ''}"></div>
 
-
-
-        <button type="submit" class="btn btn-danger btn-block mb-4"
+        <button class="btn btn-danger btn-block mb-4"
                 style="font-size: 20px; background-color: #f24521;"
-                >Prijava</button>
-
-
+                type="submit">Prijava</button>
     </form>
 
 
