@@ -5,20 +5,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity(name="app_user")
-public class User {
+public class UserTm {
     //dodano za logiranje
     static int idCounter = 0;
     @Id @GeneratedValue
-    int id;
+    private Long id;
     //0-Patient, 1-Admin
     int type = 0;
 
-    public User(String email, String lozinka) {
-        this.email = email;
-        this.lozinka = lozinka;
-
-        id = idCounter++;
+    public UserTm() {
     }
+
 
 
     private String ime;
@@ -29,7 +26,7 @@ public class User {
     private String lozinka;
     private String mbo;
 
-    public User(String ime, String prezime, String datumRodenja, String brojMobitela, String email, String lozinka, String mbo) {
+    public UserTm(String ime, String prezime, String datumRodenja, String brojMobitela, String email, String lozinka, String mbo) {
         this.ime = ime;
         this.prezime = prezime;
         this.datumRodenja = datumRodenja;
@@ -37,7 +34,6 @@ public class User {
         this.email = email;
         this.lozinka = lozinka;
         this.mbo = mbo;
-        id = idCounter++;
     }
 
     public String getIme() {
@@ -96,7 +92,7 @@ public class User {
         this.mbo = mbo;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 

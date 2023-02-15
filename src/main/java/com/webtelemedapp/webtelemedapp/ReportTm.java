@@ -2,12 +2,12 @@ package com.webtelemedapp.webtelemedapp;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
 @Entity
-public class UserReport {
+public class ReportTm {
 
-        @Id @GeneratedValue
-        private int Id;
+        @Id
+        @GeneratedValue
+        private Long Id;
         private String date;
         private int systolic;
         private int diastolic;
@@ -16,17 +16,21 @@ public class UserReport {
 
         //dodatno kod kreiranja logiranja
         @ManyToOne
-        private User user;
+        @JoinColumn
+        private UserTm userTm;
 
-    public User getUser() {
-        return user;
+    public ReportTm() {
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public UserTm getUser() {
+        return userTm;
     }
 
-    public UserReport(String date, int systolic, int diastolic, int heartBeats, String description) {
+    public void setUser(UserTm userTm) {
+        this.userTm = userTm;
+    }
+
+    public ReportTm(String date, int systolic, int diastolic, int heartBeats, String description) {
         this.date = date;
         this.systolic = systolic;
         this.diastolic = diastolic;
