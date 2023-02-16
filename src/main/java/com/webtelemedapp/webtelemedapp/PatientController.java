@@ -44,7 +44,7 @@ public class PatientController {
     // treba testirati metoda za Izbor pacijenta
 
     @GetMapping("/selectUser")
-    public String showTodos(long userId, Model model) {
+    public String selectUser(long userId, Model model) {
 
         // add current user
         UserTm currUser = RpRepository.findById(userId).get().getUser();
