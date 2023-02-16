@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 public class UserTm {
     @Id @GeneratedValue
     private Long id;
+
     //0-Patient, 1-Admin
     int type = 0;
 

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
 
-import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -46,12 +45,11 @@ public class PatientController {
     @GetMapping("/selectUser")
     public String selectUser(long userId, Model model) {
 
-        // add current user
-        UserTm currUser = RpRepository.findById(userId).get().getUser();
-        model.addAttribute("currUser", currUser);
 
-        // add all todo for that user
-        model.addAttribute(RpRepository.findByUserTm(currUser));
+        UserTm currentUser = RpRepository.findById(userId).get().getUser();
+        model.addAttribute("currentUser", currentUser);
+
+        model.addAttribute(RpRepository.findByUserTm(currentUser));
         return "pacijent_popis_zapisa.html";
     }
 
