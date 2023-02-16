@@ -38,15 +38,24 @@ public class DoctorController {
         model.addAttribute(userTmList);
         UserTm newUserTm = new UserTm(ime1, prezime1, datumRodenja1, brojMobitela1, email1, lozinka1, mbo1);
         userTmList.add(newUserTm);
-        return "redirect: doktor_dashboard.html";
+        return "redirect: /listUsers";
 
     }
-    @GetMapping("/redirectToCreate")
-    public String redirectPatients(Model model) {
+    @GetMapping("/createNewUser")
+    public String createNewUser(Model model) {
         model.addAttribute(userTmList);
-        return "Doktor - kreiranje novog pacijenta.html";
+        return "kreiranje_novog_usera.html";
 
     }
+
+
+    @GetMapping("/showUser")
+    public String showUser(Model model) {
+        model.addAttribute(userTmList);
+        return "doktor_pregled_pojedinog_pacijenta.html";
+
+    }
+
 
 
 
