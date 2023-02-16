@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 @Entity
 public class ReportTm {
-
         @Id
         @GeneratedValue
         private Long Id;

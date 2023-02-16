@@ -39,7 +39,9 @@ public class PatientController {
 
 
 
-    // EMPLOYEE METHODS SELECT USER
+
+
+    // treba testirati metoda za Izbor pacijenta
 
     @GetMapping("/selectUser")
     public String showTodos(long userId, Model model) {

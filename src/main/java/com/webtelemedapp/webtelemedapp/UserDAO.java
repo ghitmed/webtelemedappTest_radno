@@ -23,7 +23,9 @@ public class UserDAO {
         userTmedList.add(new UserTm("Danijel", "Hlad", "01.02.2000.", "0912223344", "danijel@gmail.com", "123", "222333"));
 
     }
+
 }
+
 /*
     public List<UserTmed> getUserListPatients() {
 
@@ -55,4 +57,6 @@ public class UserDAO {
         return userTmed;
     }
 }
-*/
+
+
+ */

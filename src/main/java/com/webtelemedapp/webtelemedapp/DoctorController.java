@@ -47,11 +47,17 @@ public class DoctorController {
         return "Doktor - kreiranje novog pacijenta.html";
 
     }
+
+
+
+    // nove metode za login, za redirekt  na login i test metoda za odabir pacijenta
+    //Za odabir pacijenta u klasi PatientController
+
+
     @GetMapping("/login")
     public String login() {
         return "login.html";
     }
-
 
     @GetMapping("/loginSubmit")
     public String login(String email, String lozinka, Model model) {
@@ -70,11 +76,12 @@ public class DoctorController {
             return "login.html";
         }
     }
+
+    @GetMapping("/")
+    public String redirectToLogin() {
+        return "redirect:/login";
+    }
 }
-
-
-
-
 
 
 

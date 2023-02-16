@@ -4,10 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-@Entity(name="app_user")
+@Entity
 public class UserTm {
-    //dodano za logiranje
-    static int idCounter = 0;
     @Id @GeneratedValue
     private Long id;
     //0-Patient, 1-Admin
@@ -15,8 +13,6 @@ public class UserTm {
 
     public UserTm() {
     }
-
-
 
     private String ime;
     private String prezime;
